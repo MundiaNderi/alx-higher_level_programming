@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-i
+exec("print('#pythoniscool\\n')")
