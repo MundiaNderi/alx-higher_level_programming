@@ -8,4 +8,4 @@ class Square:
 
 
 my_square = Square()
-print(my_square)
+print(type(my_square))
