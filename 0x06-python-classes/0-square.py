@@ -8,4 +8,3 @@ class Square:
 
 
 my_square = Square()
-print(type(my_square))
