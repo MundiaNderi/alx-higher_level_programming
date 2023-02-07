@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This module holds a function that checks if an object is an instance 
+"""This module holds a function that checks if an object is an instance
 or a specified class.
 """
 
