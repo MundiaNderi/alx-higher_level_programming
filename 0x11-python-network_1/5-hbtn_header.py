@@ -1,11 +1,13 @@
 #!/usr/bin/python3
-"""  sends a request to the URL and displays the value of the variable
-X-Request-Id in the response header"""
+"""sends a POST request to the passed URL with the email as a parameter, and
+finally displays the body of the response."""
 
 import requests
 import sys
 
 if __name__ == "__main__":
+    url = sys.argv[1]
+    email = {"email": sys.argv[2]}
 
-    req = requests.get(sys.argv[1])
-    print(req.headers.get("X-Request-Id"))
+    req = requests.post(url, data=email)
+    print(req.text)
