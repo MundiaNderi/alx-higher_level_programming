@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-# Module that displays value of variable X-Request-Id
+"""  sends a request to the URL and displays the value of the variable
+X-Request-Id in the response header"""
+
 import requests
 import sys
 
-
 if __name__ == "__main__":
-    # displays value of variable X-Request-Id
-    r = requests.get(sys.argv[1])
-    print(r.headers.get('X-Request-Id'))
+
+    req = requests.get(sys.argv[1])
+    print(req.headers.get("X-Request-Id"))
