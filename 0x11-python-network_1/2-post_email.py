@@ -1,18 +1,20 @@
 #!/usr/bin/python3
-# Module with code that sends email POST request
-import urllib.request
-import urllib.parse
+"""Sends a POST request to a given URL with a given email.
+Usage: ./2-post_email.py <URL> <email>
+  - Displays the body of the response.
+"""
+
+
 import sys
+import urllib.parse
+import urllib.request
 
 
 if __name__ == "__main__":
-    # sends email POST request
     url = sys.argv[1]
-    email = sys.argv[2]
-    values = {'email': email}
-    data = urllib.parse.urlencode(values)
-    data = data.encode('ascii')
-    req = urllib.request.Request(url, data)
-    with urllib.request.urlopen(req) as request:
-        html = request.read()
-    print(html.decode('utf-8'))
+    value = {"email": sys.argv[2]}
+    data = urllib.parse.urlencode(value).encode("ascii")
+
+    request = urllib.request.Request(url, data)
+    with urllib.request.urlopen(request) as response:
+        print(response.read().decode("utf-8"))
