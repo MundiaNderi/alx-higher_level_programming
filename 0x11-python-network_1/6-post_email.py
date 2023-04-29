@@ -1,11 +1,13 @@
 #!/usr/bin/python3
-# Module that posts an email
+"""sends a POST request to the passed URL with the email as a parameter, and
+finally displays the body of the response."""
+
 import requests
 import sys
 
-
 if __name__ == "__main__":
-    # posts an email
-    email = {'email': sys.argv[2]}
-    r = requests.post(sys.argv[1], data=email)
-    print(r.text)
+    url = sys.argv[1]
+    email = {"email": sys.argv[2]}
+
+    req = requests.post(url, data=email)
+    print(req.text)
