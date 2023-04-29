@@ -1,17 +1,19 @@
 #!/usr/bin/python3
-# Module with code that mangages error code
-import urllib.request
-import urllib.error
+"""Sends a request to a given URL and displays the response body.
+Usage: ./3-error_code.py <URL>
+  - Handles HTTP errors.
+"""
 import sys
+import urllib.error
+import urllib.request
 
 
 if __name__ == "__main__":
-    # displays body of response and manages error code
     url = sys.argv[1]
-    req = urllib.request.Request(url)
+
+    request = urllib.request.Request(url)
     try:
-        with urllib.request.urlopen(req) as request:
-            page = request.read()
-        print(page.decode('utf-8'))
+        with urllib.request.urlopen(request) as response:
+            print(response.read().decode("ascii"))
     except urllib.error.HTTPError as e:
         print("Error code: {}".format(e.code))
