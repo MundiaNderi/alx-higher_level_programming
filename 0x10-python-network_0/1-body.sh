@@ -1,3 +1,3 @@
 #!/usr/bin/python3
 # get request to URL, displays body of response
-curl -sL "$1"
+curl -s "$1" | wc -c

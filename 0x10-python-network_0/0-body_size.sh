@@ -1,3 +1,3 @@
 #!/usr/bin/python3
 # Displays body size of URL
-curl -sI "$1" | grep "Content-Length" | cut -d ':' -f 2 | cut -d ' ' -f 2
+size=$(curl -sI "$1" | grep -i content-length | awk '{print $2}' | tr -d '\r\n')
