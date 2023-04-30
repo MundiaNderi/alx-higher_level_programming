@@ -1,9 +1,12 @@
 #!/bin/bash
-"""Defines a peak-finding algorithm."""
+"""
+Module that finds the peak of an unsorted list of ints
+Defines a peak-finding algorithm.
+"""
 
 
 def find_peak(list_of_integers):
-    """ Finds the peak in a list of integers """
+    """finds the peak of an unsorted list of ints """
     if list_of_integers == []:
         return None
 
