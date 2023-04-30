@@ -1,3 +1,3 @@
-#!/usr/bin/python3
-# get request to URL, displays body of response
-curl -s "$1" | wc -c
+#!/bin/bash
+# Bash script that takes in a URL,and displays the body of the response.
+curl -Ls "$1"
