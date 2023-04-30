@@ -1,3 +1,3 @@
-#!/usr/bin/python3
-# Sends POST request and displays body response
-curl -sX "POST" "$1" -d "test@gmail.com&subject=I will always be here for PLD"
+#!/bin/bash
+# Script that sends a POST request & displays the body response
+curl -sX POST -d "email=test@gmail.com&subject=I will always be here for PLD" "$1"

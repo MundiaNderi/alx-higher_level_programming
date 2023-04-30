@@ -1,3 +1,3 @@
-#!/usr/bin/python3
-# Displays all acceptable HTTP methods
-curl -siX "OPTIONS" "$1" | grep "Allow:" | cut -d ' ' -f 2-
+#!/bin/bash
+# Bash script that takes in URL & displays all HTTP methods server will accept.
+curl -sI "$1" | grep "Allow" | cut -d " " -f 2-

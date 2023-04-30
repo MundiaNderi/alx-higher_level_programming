@@ -1,3 +1,3 @@
-#!/usr/bin/python3
-# Sends a delete request
-curl -sX "DELETE" "$1"
+#!/bin/bash
+# Script that sends a DELETE request to the URL passed
+curl -sX DELETE "$1"
