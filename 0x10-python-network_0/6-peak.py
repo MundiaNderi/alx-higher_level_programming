@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/bin/bash
 """Defines a peak-finding algorithm."""
 
 
