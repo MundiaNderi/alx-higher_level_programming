@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/python3
 """
 Module that finds the peak of an unsorted list of ints
 Defines a peak-finding algorithm.
